@@ -18,6 +18,14 @@ const projects = [
     liveDemo: "https://medium-gamma-six.vercel.app/signup", // has live demo
   },
   {
+    title: "Personal-Notes-Bookmark-Manager",
+    stack:
+      "React (Vite) | Tailwind CSS | Axios |Firebase Authentication | Node.js | Express.js | MongoDB | Firebase Admin SDK (for token verification)",
+    desc: "A secure RESTful API for managing personal notes and bookmarks.",
+    github:
+      "https://github.com/MohamedFazil1406/Personal-Notes-Bookmark-Manager/tree/main",
+  },
+  {
     title: "Banking System",
     stack: "Java / Spring Boot ",
     desc: "A secure full-stack banking system and transaction management.",
