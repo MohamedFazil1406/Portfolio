@@ -30,7 +30,6 @@ const projects = [
     stack: "Java / Spring Boot ",
     desc: "A secure full-stack banking system and transaction management.",
     github: "https://github.com/MohamedFazil1406/Banking-System-spring-boot",
-    // ❌ no live demo
   },
   {
     title: "Library Management System",
