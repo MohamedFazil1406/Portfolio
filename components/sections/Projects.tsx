@@ -4,6 +4,13 @@ import { title } from "process";
 
 const projects = [
   {
+    title: "Chatbot Pro",
+    stack: "Next.js / TypeScript / Firebase",
+    desc: "A multi-tenant SaaS chatbot platform with real-time chat, secure authentication, and analytics dashboard.",
+    github: "https://github.com/MohamedFazil1406/Chat-Bot-Pro",
+    liveDemo: "https://chat-bot-pro-rho.vercel.app/",
+  },
+  {
     title: "Task Wave",
     stack: "Next.js / Firebase",
     desc: "A secure full-stack task management app with Google OAuth.",
