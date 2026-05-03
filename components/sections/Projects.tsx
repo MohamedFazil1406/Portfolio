@@ -4,6 +4,13 @@ import { title } from "process";
 
 const projects = [
   {
+    title: "OpenRouter",
+    stack: "Turborepo / Elysia.js / TypeScript / Neon DB / Prisma",
+    desc: "A multi-provider AI gateway platform that integrates OpenRouter APIs, featuring secure request handling, rate limiting, and a developer dashboard for monitoring usage and model performance.",
+    github: "https://github.com/MohamedFazil1406/OpenRouter",
+    liveDemo: "https://open-router-frontend-dashboard.vercel.app/",
+  },
+  {
     title: "Chatbot Pro",
     stack: "Next.js / TypeScript / Firebase",
     desc: "A multi-tenant SaaS chatbot platform with real-time chat, secure authentication, and analytics dashboard.",
