@@ -32,6 +32,12 @@ const projects = [
     liveDemo: "https://medium-gamma-six.vercel.app/signup", // has live demo
   },
   {
+    title: "PerplexAI",
+    stack: "React / Bun / TypeScript / Supabase / Prisma / OpenRouter / Tavily",
+    desc: "A Perplexity-inspired AI search platform that combines real-time web search with LLM-powered responses, featuring streaming AI conversations, persistent chat history, Supabase OAuth authentication, and contextual follow-up interactions.",
+    github: "https://github.com/MohamedFazil1406/perplexity",
+  },
+  {
     title: "Personal-Notes-Bookmark-Manager",
     stack:
       "React (Vite) | Tailwind CSS | Axios |Firebase Authentication | Node.js | Express.js | MongoDB | Firebase Admin SDK (for token verification)",
