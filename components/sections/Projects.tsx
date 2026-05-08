@@ -38,6 +38,13 @@ const projects = [
     github: "https://github.com/MohamedFazil1406/perplexity",
   },
   {
+    title: "FinTrack",
+    stack:
+      "React / Spring Boot / Java / MySQL / Spring Security / JWT / Recharts",
+    desc: "A full-stack personal finance management platform that enables users to track income, expenses, and transactions through an interactive analytics dashboard, featuring JWT authentication, secure REST APIs, expense visualization charts, and user-specific financial insights.",
+    github: "https://github.com/MohamedFazil1406/Fintrack",
+  },
+  {
     title: "Personal-Notes-Bookmark-Manager",
     stack:
       "React (Vite) | Tailwind CSS | Axios |Firebase Authentication | Node.js | Express.js | MongoDB | Firebase Admin SDK (for token verification)",
