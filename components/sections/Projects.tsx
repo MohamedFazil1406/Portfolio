@@ -38,6 +38,12 @@ const projects = [
     github: "https://github.com/MohamedFazil1406/perplexity",
   },
   {
+    title: "E-Commerce Management System",
+    stack: "Java / Spring Boot / Spring MVC / JSP / Hibernate / MySQL / Maven",
+    desc: "A full-stack e-commerce management system built using Spring Boot and JSP following MVC architecture. Features include user registration and login, role-based access control (Admin/User), product management, order management, session-based authentication, and complete CRUD operations with MySQL database integration.",
+    github: "YOUR_GITHUB_REPOSITORY_LINK",
+  },
+  {
     title: "FinTrack",
     stack:
       "React / Spring Boot / Java / MySQL / Spring Security / JWT / Recharts",
