@@ -61,7 +61,7 @@ export default function Contact() {
         {/* RESUME BUTTON */}
         <div className="mt-8 text-center">
           <a
-            href="/Resume.pdf"
+            href="/Fazil_Software_Developement_Resume.pdf"
             className="inline-block bg-blue-600 px-8 py-3 rounded-lg hover:bg-blue-700 transition font-bold"
           >
             Download Resume
