@@ -1,21 +1,50 @@
+import { useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
+import { ArrowUpRight } from "lucide-react";
+import { getGithubContributions } from "../api/github";
 
-export default function GithubActivity() {
+export default function GitHubActivity() {
+  const [count, setCount] = useState<number>();
+
+  useEffect(() => {
+    getGithubContributions("MohamedFazil1406").then(setCount);
+  }, []);
+
   return (
-    <section className="rounded-2xl border border-zinc-800 bg-black p-8">
-      <h2 className="text-sm uppercase tracking-widest text-gray-500 mb-6">
-        GitHub Activity
-      </h2>
+    <a
+      href="https://github.com/MohamedFazil1406"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <section className="rounded-3xl border border-zinc-800 bg-black p-6 hover:border-zinc-700 transition-all">
+        <div className="mb-6 flex justify-between items-start">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
+              GitHub Activity
+            </p>
 
-      <GitHubCalendar
-        username="MohamedFazil1406"
-        colorScheme="dark"
-        blockSize={
-          window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 13
-        }
-        blockMargin={3}
-        fontSize={12}
-      />
-    </section>
+            <h2 className="mt-4 text-3xl font-bold text-white">
+              {count ?? "..."}
+              <span className="ml-2 text-lg font-normal text-zinc-400">
+                contributions in the last year
+              </span>
+            </h2>
+          </div>
+
+          <ArrowUpRight className="h-5 w-5 text-zinc-500" />
+        </div>
+
+        <div className="overflow-x-auto">
+          <GitHubCalendar
+            username="MohamedFazil1406"
+            colorScheme="dark"
+            blockSize={12}
+            blockMargin={4}
+            fontSize={14}
+          />
+        </div>
+      </section>
+    </a>
   );
 }
