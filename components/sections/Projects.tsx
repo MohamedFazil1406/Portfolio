@@ -17,6 +17,21 @@ const projects = [
     github: "https://github.com/MohamedFazil1406/Chat-Bot-Pro",
     liveDemo: "https://chat-bot-pro-rho.vercel.app/",
   },
+
+  {
+  title: "ChatStream",
+  stack: "React / Node.js / Express / MongoDB / Socket.IO",
+  desc: "A real-time chat application with secure user authentication, instant one-to-one messaging, online presence indicators, typing status, and Socket.IO-powered live communication for seamless conversations.",
+  github: "https://github.com/MohamedFazil1406/Real-Time-Chat",
+  liveDemo: "https://real-time-chat-ashy-two.vercel.app/",
+},
+{
+  title: "RealTimeAlertSystem",
+  stack: "Go / Gin / React / PostgreSQL / PostGIS / Leaflet / WebSocket",
+  desc: "A real-time vehicle tracking and geofencing platform that monitors live GPS locations, detects geofence entry and exit events, records violations, and delivers instant WebSocket-based alerts through an interactive dashboard.",
+  github: "https://github.com/MohamedFazil1406/RealTimeAlertSystem",
+  
+},
   {
     title: "Task Wave",
     stack: "Next.js / Firebase",
