@@ -10,7 +10,11 @@ export default function GithubActivity() {
       <GitHubCalendar
         username="MohamedFazil1406"
         colorScheme="dark"
-        fontSize={14}
+        blockSize={
+          window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 13
+        }
+        blockMargin={3}
+        fontSize={12}
       />
     </section>
   );
