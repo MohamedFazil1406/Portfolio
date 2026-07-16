@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import { ArrowUpRight } from "lucide-react";
