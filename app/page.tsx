@@ -5,6 +5,7 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import GithubActivity from "@/components/sections/GithubActivity";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <GithubActivity />
       <Projects />
       <Contact />
       <Footer />
