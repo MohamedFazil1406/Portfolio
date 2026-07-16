@@ -14,19 +14,25 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-6 text-center md:text-left"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400/40 ">
-            Hi, I’m <span className="text-white">Mohd Fazil</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+            <span className="text-blue-400">Hi, I'm</span>{" "}
+            <span className="text-white">Mohamed Fazil</span>
           </h1>
 
-          <div className="inline-flex flex-wrap justify-center md:justify-start gap-2 bg-black/40 border border-white/10 px-4 py-2 rounded-full text-sm">
-            <span className="text-yellow-400">Backend Developer</span>
-            <span className="text-white/50">
-              | Java | Spring Boot | Node.js
+          <div className="inline-flex items-center flex-wrap gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm backdrop-blur-sm">
+            <span className="font-medium text-yellow-400">
+              Full Stack Software Engineer
+            </span>
+            <span className="text-gray-400">
+              | Java | Spring Boot | React | Node.js | TypeScript
             </span>
           </div>
 
-          <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto md:mx-0">
-            I build scalable and efficient backend systems.
+          <p className="max-w-2xl text-base leading-7 text-gray-400 md:text-lg">
+            I build scalable, high-performance web applications and backend
+            systems using modern technologies. Passionate about creating clean,
+            efficient, and production-ready software with a focus on
+            performance, security, and user experience.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">

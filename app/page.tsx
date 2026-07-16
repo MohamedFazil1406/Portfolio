@@ -5,7 +5,7 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import GithubActivity from "@/components/sections/GithubActivity";
+import GitHubActivity from "@/components/github/GitHubActivity";
 
 export default function Home() {
   return (
@@ -14,7 +14,9 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <GithubActivity />
+      <div className="flex justify-center  ">
+        <GitHubActivity />
+      </div>
       <Projects />
       <Contact />
       <Footer />
