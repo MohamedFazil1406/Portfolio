@@ -14,7 +14,7 @@ export async function getGithubContributions(username: string) {
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${(import.meta as any).env.VITE_GITHUB_TOKEN}`,
+      Authorization: `Bearer ${(import.meta as any).env.NEXT_PUBLIC_GITHUB_TOKEN}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
