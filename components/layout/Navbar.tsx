@@ -1,57 +1,100 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { HiBars3, HiXMark } from "react-icons/hi2";
+
+const navItems = [
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-black/50 backdrop-blur border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-        <h1 className="font-bold text-lg text-gray-300">
-          {"<"}Fazil.dev{"/>"}
-        </h1>
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="mx-auto mt-4 max-w-7xl px-6">
+        <nav className="flex items-center justify-between rounded-2xl border border-white/10 bg-black/40 px-6 py-4 backdrop-blur-xl shadow-lg">
+          {/* Logo */}
+          <a href="#" className="text-xl font-bold tracking-wide text-white">
+            <span className="text-blue-400">&lt;</span>
+            Fazil
+            <span className="text-cyan-400">.dev</span>
+            <span className="text-blue-400">/&gt;</span>
+          </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 text-gray-300">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-8 md:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="relative text-gray-300 transition hover:text-white group"
+              >
+                {item.name}
 
-        {/* Mobile Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-xl"
-        >
-          ☰
-        </button>
-      </div>
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-400 transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+          </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-black/90 px-6 py-4 flex flex-col gap-4 text-gray-300">
-          <a onClick={() => setOpen(false)} href="#about">
-            About
-          </a>
-          <a onClick={() => setOpen(false)} href="#skills">
-            Skills
-          </a>
-          <a onClick={() => setOpen(false)} href="#projects">
-            Projects
-          </a>
-          <a onClick={() => setOpen(false)} href="#contact">
-            Contact
-          </a>
-          <a
-            href="/Resume.pdf"
-            className="bg-blue-600 text-center py-2 rounded"
+          {/* Right Side */}
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="/Resume.pdf"
+              download
+              className="rounded-xl bg-linear-to-r from-blue-600 to-cyan-500 px-5 py-2.5 font-medium text-white transition hover:scale-105"
+            >
+              Resume
+            </a>
+          </div>
+
+          {/* Mobile Button */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="rounded-lg p-2 text-3xl text-white transition hover:bg-white/10 md:hidden"
           >
-            Resume
-          </a>
-        </div>
-      )}
-    </nav>
+            {open ? <HiXMark /> : <HiBars3 />}
+          </button>
+        </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25 }}
+              className="mt-3 rounded-2xl border border-white/10 bg-black/80 backdrop-blur-xl p-6 md:hidden"
+            >
+              <div className="flex flex-col gap-5">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded-xl px-4 py-3 text-gray-300 transition hover:bg-white/10 hover:text-white"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+
+                <a
+                  href="/Resume.pdf"
+                  download
+                  className="mt-2 rounded-xl bg-linear-to-r from-blue-600 to-cyan-500 py-3 text-center font-semibold text-white transition hover:scale-[1.02]"
+                >
+                  Download Resume
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </header>
   );
 }
