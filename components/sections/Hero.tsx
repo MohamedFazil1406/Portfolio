@@ -2,19 +2,14 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaDownload,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload, FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center px-6 py-24">
       {/* Background Glow */}
-      <div className="absolute -top-40 left-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[150px]" />
-      <div className="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[150px]" />
+      <div className="absolute -top-40 left-0 h-125 w-125 rounded-full bg-blue-500/10 blur-[150px]" />
+      <div className="absolute bottom-0 right-0 h-112.5 w-112.5 rounded-full bg-cyan-500/10 blur-[150px]" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
         {/* LEFT */}
@@ -35,7 +30,7 @@ export default function Hero() {
 
             <br />
 
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent">
               Mohamed Fazil
             </span>
           </h1>
@@ -60,7 +55,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               href="#projects"
-              className="inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white shadow-lg transition"
+              className="inline-flex items-center gap-3 rounded-2xl bg-linear-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white shadow-lg transition"
             >
               View Projects
               <FaArrowRight />
@@ -111,9 +106,7 @@ export default function Hero() {
                 key={label}
                 className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-xl"
               >
-                <h3 className="text-3xl font-bold text-blue-400">
-                  {value}
-                </h3>
+                <h3 className="text-3xl font-bold text-blue-400">{value}</h3>
 
                 <p className="mt-2 text-sm text-gray-400">{label}</p>
               </div>
@@ -126,11 +119,11 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="hidden lg:flex justify-center"
+          className="hidden lg:flex justify-center items-start -mt-80"
         >
-          <div className="relative h-[460px] w-[460px]">
+          <div className="relative h-115 w-115">
             {/* Glow */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-30 blur-3xl" />
+            <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-cyan-500 opacity-30 blur-3xl" />
 
             {/* Ring */}
             <div className="absolute inset-0 rounded-full border border-blue-500/20" />
