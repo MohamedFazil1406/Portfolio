@@ -28,7 +28,7 @@ export default function GitHubCalendar({ weeks, months }: Props) {
   const monthNames = ["", "Mon", "", "Wed", "", "Fri", ""];
 
   return (
-    <div className="overflow-x-auto overflow-y-visible pb-2">
+    <div className="no-scrollbar overflow-x-auto overflow-y-visible pb-2">
       <div className="relative inline-block min-w-max">
         {/* Month Labels */}
         <div className="mb-3 flex pl-8">
