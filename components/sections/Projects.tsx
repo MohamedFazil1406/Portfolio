@@ -1,153 +1,144 @@
 "use client";
-
-import { title } from "process";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
     title: "OpenRouter",
     stack: "Turborepo / Elysia.js / TypeScript / Neon DB / Prisma",
-    desc: "A multi-provider AI gateway platform that integrates OpenRouter APIs, featuring secure request handling, rate limiting, and a developer dashboard for monitoring usage and model performance.",
+    desc: "A multi-provider AI gateway platform integrating OpenRouter APIs with secure request handling, rate limiting, and a developer dashboard.",
     github: "https://github.com/MohamedFazil1406/OpenRouter",
     liveDemo: "https://open-router-frontend-dashboard.vercel.app/",
   },
   {
     title: "Chatbot Pro",
     stack: "Next.js / TypeScript / Firebase",
-    desc: "A multi-tenant SaaS chatbot platform with real-time chat, secure authentication, and analytics dashboard.",
+    desc: "A multi-tenant SaaS chatbot platform with real-time messaging, secure authentication, and analytics.",
     github: "https://github.com/MohamedFazil1406/Chat-Bot-Pro",
     liveDemo: "https://chat-bot-pro-rho.vercel.app/",
   },
-
   {
-  title: "ChatStream",
-  stack: "React / Node.js / Express / MongoDB / Socket.IO",
-  desc: "A real-time chat application with secure user authentication, instant one-to-one messaging, online presence indicators, typing status, and Socket.IO-powered live communication for seamless conversations.",
-  github: "https://github.com/MohamedFazil1406/Real-Time-Chat",
-  liveDemo: "https://real-time-chat-ashy-two.vercel.app/",
-},
-{
-  title: "RealTimeAlertSystem",
-  stack: "Go / Gin / React / PostgreSQL / PostGIS / Leaflet / WebSocket",
-  desc: "A real-time vehicle tracking and geofencing platform that monitors live GPS locations, detects geofence entry and exit events, records violations, and delivers instant WebSocket-based alerts through an interactive dashboard.",
-  github: "https://github.com/MohamedFazil1406/RealTimeAlertSystem",
-  
-},
+    title: "ChatStream",
+    stack: "React / Node.js / Express / MongoDB / Socket.IO",
+    desc: "A real-time chat application featuring authentication, one-to-one messaging, typing indicators, online presence, and Socket.IO-powered communication.",
+    github: "https://github.com/MohamedFazil1406/Real-Time-Chat",
+    liveDemo: "https://real-time-chat-ashy-two.vercel.app/",
+  },
+  {
+    title: "MAZI",
+    stack: "Next.js / React / TypeScript / Prisma / PostgreSQL / Supabase",
+    desc: "A collaborative scheduling platform where users create shared calendars, join with a Calendar ID and PIN, and discover overlapping availability in real time.",
+    github: "https://github.com/MohamedFazil1406/MAZI",
+    liveDemo: "https://mazi-dun.vercel.app/",
+  },
+  {
+    title: "RealTimeAlertSystem",
+    stack: "Go / Gin / React / PostgreSQL / PostGIS / Leaflet / WebSocket",
+    desc: "A real-time vehicle tracking and geofencing platform with live GPS tracking, violation detection, and instant WebSocket alerts.",
+    github: "https://github.com/MohamedFazil1406/RealTimeAlertSystem",
+  },
   {
     title: "Task Wave",
     stack: "Next.js / Firebase",
-    desc: "A secure full-stack task management app with Google OAuth.",
+    desc: "A task management platform with Google OAuth, secure authentication, and real-time productivity tools.",
     github: "https://github.com/MohamedFazil1406/task-wave",
-    liveDemo: "https://task-wave-pi.vercel.app/", // has live demo
+    liveDemo: "https://task-wave-pi.vercel.app/",
   },
   {
     title: "Medium Clone",
-    stack: "React / TypeScript / Hono / PostgreSQL / JWT.",
-    desc: "A full-stack blogging platform with secure authentication and user-generated content.",
+    stack: "React / TypeScript / Hono / PostgreSQL / JWT",
+    desc: "A full-stack blogging platform with authentication, article publishing, and responsive UI.",
     github: "https://github.com/MohamedFazil1406/Medium",
-    liveDemo: "https://medium-gamma-six.vercel.app/signup", // has live demo
+    liveDemo: "https://medium-gamma-six.vercel.app/signup",
   },
   {
     title: "Perplexity AI",
     stack: "React / Bun / TypeScript / Supabase / Prisma / OpenRouter / Tavily",
-    desc: "A Perplexity-inspired AI search platform that combines real-time web search with LLM-powered responses, featuring streaming AI conversations, persistent chat history, Supabase OAuth authentication, and contextual follow-up interactions.",
+    desc: "An AI-powered search engine combining real-time web search with streaming LLM responses and persistent conversations.",
     github: "https://github.com/MohamedFazil1406/perplexity",
   },
   {
-    title: "E-Commerce Management System",
-    stack: "Java / Spring Boot / Spring MVC / JSP / Hibernate / MySQL / Maven",
-    desc: "A full-stack e-commerce management system built using Spring Boot and JSP following MVC architecture. Features include user registration and login, role-based access control (Admin/User), product management, order management, session-based authentication, and complete CRUD operations with MySQL database integration.",
-    github: "https://github.com/MohamedFazil1406/Grocery-WebSite",
-  },
-  {
     title: "FinTrack",
-    stack:
-      "React / Spring Boot / Java / MySQL / Spring Security / JWT / Recharts",
-    desc: "A full-stack personal finance management platform that enables users to track income, expenses, and transactions through an interactive analytics dashboard, featuring JWT authentication, secure REST APIs, expense visualization charts, and user-specific financial insights.",
+    stack: "React / Spring Boot / Java / MySQL / Spring Security / JWT",
+    desc: "A finance management application with analytics dashboard, JWT authentication, and expense visualization.",
     github: "https://github.com/MohamedFazil1406/Fintrack",
-  },
-  {
-    title: "Personal-Notes-Bookmark-Manager",
-    stack:
-      "React (Vite) | Tailwind CSS | Axios |Firebase Authentication | Node.js | Express.js | MongoDB | Firebase Admin SDK (for token verification)",
-    desc: "A secure RESTful API for managing personal notes and bookmarks.",
-    github:
-      "https://github.com/MohamedFazil1406/Personal-Notes-Bookmark-Manager/tree/main",
-  },
-  {
-    title: "Banking System",
-    stack: "Java / Spring Boot ",
-    desc: "A secure full-stack banking system and transaction management.",
-    github: "https://github.com/MohamedFazil1406/Banking-System-spring-boot",
-  },
-  {
-    title: "Library Management System",
-    stack: "Java / Spring Boot",
-    desc: "A secure RESTful API for a library management system with JWT authentication.",
-    github: "https://github.com/MohamedFazil1406/library-management-system",
-  },
-  {
-    title: "Student Management System",
-    stack: "Core Java / OOP / ArrayList / CRUD",
-    desc: "A secure RESTful API for a student management system with JWT authentication.",
-    github: "https://github.com/MohamedFazil1406/Student-management-system",
-  },
-  {
-    title: "Stock Market Data Backend",
-    stack: "Python / FastAPI / Pandas / NumPy / yfinance / Matplotlib",
-    desc: "A backend platform built using Python and FastAPI to fetch, clean, and analyze real-time and historical stock market data, exposing REST APIs with Swagger documentation.",
-    github: "https://github.com/MohamedFazil1406/stock-market",
-  },
-  {
-    title: "User Authentication System",
-    stack: "MERN Stack",
-    desc: "Secure user authentication system with JWT, bcrypt, and protected routes.",
-    github: "https://github.com/MohamedFazil1406/User-Auth-System",
   },
 ];
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24"
-    >
-      <h2 className="text-2xl font-bold mb-8 text-white">📁 My Projects</h2>
+    <section id="projects" className="relative overflow-hidden py-24 px-6">
+      {/* Background Glow */}
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-blue-500/10 blur-[140px]" />
+      <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-cyan-500/10 blur-[140px]" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {projects.map((p) => (
-          <div
-            key={p.title}
-            className="bg-black/40 border border-white/10 rounded-xl p-6 space-y-3"
-          >
-            <h3 className="font-semibold text-lg text-white">{p.title}</h3>
-            <p className="text-sm text-blue-400">{p.stack}</p>
-            <p className="text-gray-400 text-sm">{p.desc}</p>
+      <div className="relative max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1 text-sm text-blue-400">
+            Portfolio
+          </span>
 
-            <div className="flex gap-3 pt-4">
-              {/* Live Demo → only if exists */}
-              {p.liveDemo && (
+          <h2 className="mt-5 text-5xl font-bold text-white">
+            Featured Projects
+          </h2>
+
+          <p className="mt-5 max-w-2xl mx-auto text-gray-400 leading-7">
+            A collection of AI applications, full-stack platforms, collaborative
+            systems, and backend services built using modern technologies.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="group flex flex-col rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-7 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]"
+            >
+              <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.stack.split("/").map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300"
+                  >
+                    {tech.trim()}
+                  </span>
+                ))}
+              </div>
+
+              <p className="mt-5 flex-1 text-sm leading-7 text-gray-400">
+                {project.desc}
+              </p>
+
+              <div className="mt-8 flex gap-3">
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-cyan-500 py-3 text-sm font-semibold text-white transition-all hover:scale-[1.03]"
+                  >
+                  <FiExternalLink className="h-5 w-5" />
+<span>Live Demo</span>
+                  </a>
+                )}
+
                 <a
-                  href={p.liveDemo}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-white bg-blue-600 text-center py-2 rounded text-sm"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10 hover:scale-[1.03]"
                 >
-                  Live Demo
+                  <FaGithub className="h-5 w-5" />
+<span>GitHub</span>
                 </a>
-              )}
-
-              {/* GitHub → always */}
-              <a
-                href={p.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-white bg-white/10 text-center py-2 rounded text-sm"
-              >
-                GitHub
-              </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
