@@ -5,20 +5,31 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
 import GitHubActivity from "@/components/github/GitHubActivity";
+import OpenSource from "@/components/OpenSource/OpenSource";
 
 export default function Home() {
   return (
     <main className="space-y-0">
       <Navbar />
+
       <Hero />
+
       <About />
+
       <Skills />
-      <div className="flex justify-center  ">
+
+      <section className="mx-auto max-w-7xl px-6 py-24 space-y-10">
         <GitHubActivity />
-      </div>
+
+        <OpenSource />
+      </section>
+
       <Projects />
+
       <Contact />
+
       <Footer />
     </main>
   );
