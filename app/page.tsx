@@ -5,6 +5,7 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Education from "@/components/sections/Education";
 
 import GitHubActivity from "@/components/github/GitHubActivity";
 import OpenSource from "@/components/OpenSource/OpenSource";
@@ -17,7 +18,7 @@ export default function Home() {
       <Hero />
 
       <About />
-
+      <Education />
       <Skills />
 
       <section className="mx-auto max-w-7xl px-6 py-24 space-y-10">
