@@ -11,6 +11,14 @@ const projects = [
     liveDemo: "https://open-router-frontend-dashboard.vercel.app/",
   },
   {
+    title: "CloudFleet",
+    stack: "React / TypeScript / Spring Boot / MySQL / WebSocket / AWS",
+    desc: "A fleet management and geofencing platform for managing vehicles, creating geofences, and detecting vehicle entry and exit events with real-time alerts.",
+    github: "https://github.com/MohamedFazil1406/cloudfleet-frontend",
+    backendGithub: "https://github.com/MohamedFazil1406/cloudfleet-backend",
+    liveDemo: "https://cloud-fleet-frontend-seven.vercel.app/login",
+  },
+  {
     title: "Chatbot Pro",
     stack: "Next.js / TypeScript / Firebase",
     desc: "A multi-tenant SaaS chatbot platform with real-time messaging, secure authentication, and analytics.",
@@ -121,8 +129,8 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-cyan-500 py-3 text-sm font-semibold text-white transition-all hover:scale-[1.03]"
                   >
-                  <FiExternalLink className="h-5 w-5" />
-<span>Live Demo</span>
+                    <FiExternalLink className="h-5 w-5" />
+                    <span>Live Demo</span>
                   </a>
                 )}
 
@@ -133,8 +141,20 @@ export default function Projects() {
                   className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10 hover:scale-[1.03]"
                 >
                   <FaGithub className="h-5 w-5" />
-<span>GitHub</span>
+                  <span>GitHub</span>
                 </a>
+
+                {project.backendGithub && (
+                  <a
+                    href={project.backendGithub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10 hover:scale-[1.03]"
+                  >
+                    <FaGithub className="h-5 w-5" />
+                    <span>Backend</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
