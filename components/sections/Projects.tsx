@@ -15,7 +15,7 @@ const projects = [
     stack: "React / TypeScript / Spring Boot / MySQL / WebSocket / AWS",
     desc: "A fleet management and geofencing platform for managing vehicles, creating geofences, and detecting vehicle entry and exit events with real-time alerts.",
     github: "https://github.com/MohamedFazil1406/cloudfleet-frontend",
-    backendGithub: "https://github.com/MohamedFazil1406/cloudfleet-backend",
+    backendGithub: "https://github.com/MohamedFazil1406/CloudFleet-Real-Time-Vehicle-Monitoring-Alert-Platform",
     liveDemo: "https://cloud-fleet-frontend-seven.vercel.app/login",
   },
   {
